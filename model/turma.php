@@ -2,7 +2,7 @@
 
     require_once('model/aluno.php');
     
-    class turma {
+    class Turma {
         protected $alunos;
         public $nomeTurma;
 
@@ -11,12 +11,12 @@
             $this->alunos = array();
         }
 
-        public function matriculaAluno($aluno):int {
+        public function matriculaAluno($aluno) {
             if(count($this->alunos) < 4) {
                 $this->alunos[] = $aluno;
-                return 1;
+                return true;
             } else
-                return 0;
+                return false;
         }
 
         public function mediaTurma(): float{
