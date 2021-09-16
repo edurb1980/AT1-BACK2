@@ -19,6 +19,17 @@
         public function getNome(): string {
             return $this->nome;
         }
+
+        public function getNotas(){
+            $notas = array();
+            $notas[0] = $this->nota1;
+            $notas[1] = $this->nota2;
+            $notas[2] = $this->nota3;
+            $notas[3] = $this->nota4;
+
+            return $notas;
+        }
+
         public function getMedia(): float {
             return (($this->nota1 + $this->nota2 + $this->nota3 + $this->nota4) / 4);
         }
