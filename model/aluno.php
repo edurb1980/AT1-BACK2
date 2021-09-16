@@ -16,7 +16,7 @@
             $this->nota3 = $n3;
             $this->nota4 = $n4;
         }
-        public function getNome(): string {
+        public function getNome(){
             return $this->nome;
         }
 
@@ -30,7 +30,7 @@
             return $notas;
         }
 
-        public function getMedia(): float {
+        public function getMedia(){
             return (($this->nota1 + $this->nota2 + $this->nota3 + $this->nota4) / 4);
         }
     }
