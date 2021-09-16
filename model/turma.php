@@ -11,8 +11,16 @@
             $this->alunos = array();
         }
 
+        public function getNomeTurma(){
+            return $this->nomeTurma;
+        }
+
+        public function getAlunos(){
+            return $this->alunos;
+        }
+
         public function matriculaAluno($aluno) {
-            if(count($this->alunos) < 4) {
+            if(count($this->alunos) < 5) {
                 $this->alunos[] = $aluno;
                 return true;
             } else
@@ -24,7 +32,7 @@
             for($i=0; $i < count($this->alunos); $i++) {
                 $soma += $this->alunos[$i]->getMedia();
             }
-            return $soma/count($this->notas);
+            return $soma/count($this->alunos);
         }
 
         
